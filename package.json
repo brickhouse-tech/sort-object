@@ -36,6 +36,8 @@
     "@znemz/union-value": "^2.0.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20",
+    "@commitlint/config-conventional": "^20",
     "better-npm-audit": "^3.3.0",
     "eslint": "9",
     "mocha": "11",
