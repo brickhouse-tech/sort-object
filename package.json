@@ -2,14 +2,17 @@
   "name": "@znemz/sort-object",
   "description": "Sort the keys in an object.",
   "version": "3.0.3",
-  "homepage": "https://github.com/nmccready/sort-object",
-  "author": "Brian Woodward (https://github.com/doowb)",
+  "homepage": "https://github.com/brickhouse/sort-object",
+  "originalAuthor": "Brian Woodward (https://github.com/doowb)",
   "maintainers": [
-    "Jon Schlinkert (https://github.com/jonschlinkert)"
+    "Nick McCready (https://github.com/nmccready)"
   ],
-  "repository": "nmccready/sort-object",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brickhouse-tech/sort-object.git"
+  },
   "bugs": {
-    "url": "https://github.com/nmccready/sort-object/issues"
+    "url": "https://github.com/brickhouse/sort-object/issues"
   },
   "license": "MIT",
   "files": [
@@ -34,8 +37,8 @@
   },
   "devDependencies": {
     "better-npm-audit": "^3.3.0",
-    "eslint": "^1.4.0",
-    "mocha": "^9.1.2",
+    "eslint": "9",
+    "mocha": "11",
     "nyc": "^15.1.0",
     "should": "^13.1.3"
   },

@@ -79,7 +79,7 @@ describe('sort object', function() {
     var actual = sortObj(o, {
       sort: function(a, b) {
         return a < b ? -1 : 1;
-      }
+      },
     });
     actual.should.eql({a: 1, b: 3, c: 2, d: 4, e: 5});
 
@@ -99,7 +99,7 @@ describe('sort object', function() {
   it('should use a function to sort keys in the given array.', function() {
     var o = sortObj({a: 'a', b: 'b', c: 'c'}, {
       keys: ['c', 'a'],
-      sort: sortDesc
+      sort: sortDesc,
     });
 
     Object.keys(o)[0].should.equal('c');
@@ -110,7 +110,7 @@ describe('sort object', function() {
   it('should use a function to sort keys in the given array.', function() {
     var o = sortObj({a: 'a', b: 'b', c: 'c'}, {
       keys: ['b', 'a'],
-      sort: sortAsc
+      sort: sortAsc,
     });
 
     Object.keys(o)[0].should.equal('a');
@@ -129,7 +129,7 @@ describe('sort object', function() {
           }
         });
         return arr.reverse();
-      }
+      },
     });
 
     Object.keys(o).length.should.equal(2);
@@ -232,7 +232,7 @@ describe('sort object', function() {
     Object.keys(collection).forEach(function(key, i) {
       collection[key].data.complex = {
         index: i,
-        key: key
+        key: key,
       };
     });
     var actual = sortObj(collection, { prop: 'data.complex' });
@@ -253,7 +253,7 @@ describe('sort object', function() {
     Object.keys(collection).forEach(function(key, i) {
       collection[key].data.complex = {
         index: i,
-        key: key
+        key: key,
       };
     });
     var actual = sortObj(collection, { prop: 'data.complex', sortOrder: 'desc' });
@@ -274,7 +274,7 @@ describe('sort object', function() {
     Object.keys(collection).forEach(function(key, i) {
       collection[key].data.complex = {
         key: key,
-        index: i
+        index: i,
       };
     });
     var actual = sortObj(collection, { prop: 'data.complex' });
@@ -295,7 +295,7 @@ describe('sort object', function() {
     Object.keys(collection).forEach(function(key, i) {
       collection[key].data.complex = {
         key: key,
-        index: i
+        index: i,
       };
     });
     var actual = sortObj(collection, { prop: 'data.complex', sortOrder: 'desc'});
