@@ -4,7 +4,9 @@ on:
   workflow_call:
   pull_request:
     branches: ["master"]
-
+    paths-ignore:
+      - '.devcontainer/**'
+      - '.github/workflows/**'
 jobs:
   test:
     strategy:
@@ -20,5 +22,6 @@ jobs:
           # cache: "npm" # needs lockfile if enabled
       - run: npm install -g npm@11
       - run: npm install
+      - run: npm run build
       - run: npm run lint
       - run: npm test

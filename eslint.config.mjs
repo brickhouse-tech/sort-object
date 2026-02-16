@@ -1,34 +1,36 @@
 import globals from "globals";
 import js from "@eslint/js";
-import { defineConfig } from "eslint/config";
+import tseslint from "typescript-eslint";
 
-export default defineConfig([
-  // JavaScript files
+export default tseslint.config(
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
-    files: ["**/*.js"],
+    files: ["src/**/*.ts"],
     languageOptions: {
       parserOptions: {
         ecmaVersion: 2020,
         sourceType: "module",
       },
       globals: {
-        ...globals.commonjs,
         ...globals.node,
       },
     },
-    plugins: {
-      js,
-    },
     rules: {
-      "no-unused-vars": "warn",
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "warn",
       "comma-dangle": ["error", "always-multiline"],
     },
-    ignores: [
-      'node_modules',
-      'node_modules/**/*.js',
-      'dist',
-      'lib',
-      'tmp',
-    ]
   },
-]);
+  {
+    ignores: [
+      "node_modules/**",
+      "lib/**",
+      "dist/**",
+      "tmp/**",
+      "*.js",
+      "*.cjs",
+      "*.mjs",
+    ],
+  },
+);
