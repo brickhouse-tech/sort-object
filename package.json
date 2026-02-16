@@ -2,7 +2,8 @@
   "name": "@znemz/sort-object",
   "description": "Sort the keys in an object.",
   "version": "3.0.8",
-  "homepage": "https://github.com/brickhouse/sort-object",
+  "type": "module",
+  "homepage": "https://github.com/brickhouse-tech/sort-object",
   "originalAuthor": "Brian Woodward (https://github.com/doowb)",
   "maintainers": [
     "Nick McCready (https://github.com/nmccready)"
@@ -12,37 +13,52 @@
     "url": "git+https://github.com/brickhouse-tech/sort-object.git"
   },
   "bugs": {
-    "url": "https://github.com/brickhouse/sort-object/issues"
+    "url": "https://github.com/brickhouse-tech/sort-object/issues"
   },
   "license": "MIT",
   "files": [
-    "index.js"
+    "lib"
   ],
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js",
+      "default": "./lib/index.js"
+    }
+  },
   "engines": {
     "node": ">=20.0.0"
   },
   "scripts": {
+    "build": "tsc",
+    "prebuild": "rm -rf lib",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "lint": "eslint *.js",
+    "lint": "eslint src/**/*.ts",
+    "prepublishOnly": "npm run build",
     "better-audit": "better-npm-audit audit"
   },
   "dependencies": {
+    "@znemz/union-value": "^2.0.2",
     "bytewise": "^1.1.0",
     "get-value": "^2.0.2",
     "is-extendable": "^0.1.1",
     "sort-asc": "^0.2.0",
-    "sort-desc": "^0.2.0",
-    "@znemz/union-value": "^2.0.2"
+    "sort-desc": "^0.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19",
     "@commitlint/config-conventional": "^19",
+    "@typescript-eslint/eslint-plugin": "^8.55.0",
+    "@typescript-eslint/parser": "^8.55.0",
     "better-npm-audit": "^3.11.0",
     "eslint": "^9",
     "globals": "^16.0.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.55.0",
     "vitest": "^3"
   },
   "keywords": [
@@ -59,11 +75,7 @@
     "re-order",
     "sort",
     "util",
-    "utils"
-  ],
-  "verb": {
-    "related": {
-      "list": []
-    }
-  }
+    "utils",
+    "typescript"
+  ]
 }

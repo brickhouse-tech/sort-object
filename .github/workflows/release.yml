@@ -3,6 +3,9 @@ name: release
 on:
   push:
     branches: ["master"]
+    paths-ignore:
+      - '.devcontainer/**'
+      - '.github/workflows/**'
     tags-ignore: ['**']
 
 jobs:
@@ -13,17 +16,14 @@ jobs:
     needs: [tests]
     steps:
       - uses: actions/checkout@v4
-        with: # important, must be defined on checkout to kick publish (defining in setup/node doesn't work)
+        with:
           token: ${{ secrets.GH_TOKEN }}
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-          # cache: "npm" # needs lockfile if enabled
-
       - name: tag release
         run: |
-          # ignore if commit message is chore(release): ...
           if [[ $(git log -1 --pretty=%B) =~ ^chore\(release\):.* ]]; then
             echo "Commit message starts with 'chore(release):', skipping release"
             exit 0

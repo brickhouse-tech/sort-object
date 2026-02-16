@@ -53,3 +53,4 @@ validation-report.json
 TODO.md
 
 .nyc_output
+/lib/
