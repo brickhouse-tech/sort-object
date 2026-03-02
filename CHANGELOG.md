@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.11](https://github.com/brickhouse-tech/sort-object/compare/v3.0.10...v3.0.11) (2026-03-02)
+
+
+### Bug Fixes
+
+* keep devcontainer paths-ignore on release only ([66fcb67](https://github.com/brickhouse-tech/sort-object/commit/66fcb676f31cb552d8a4f1a141ae0c933ba17e2f))
+* remove paths-ignore from tests.yml so PR checks run ([81fec6f](https://github.com/brickhouse-tech/sort-object/commit/81fec6f7dff14b424075f80e25ca8ef55c7fe712))
+
 ## 3.0.10 (2026-03-02)
 
 ## 3.0.9 (2026-02-16)
