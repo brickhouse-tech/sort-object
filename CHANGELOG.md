@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.12](https://github.com/brickhouse-tech/sort-object/compare/v3.0.11...v3.0.12) (2026-03-11)
+
+
+### Bug Fixes
+
+* change dependabot merge-method from squash to merge to preserve commit history ([32ffdac](https://github.com/brickhouse-tech/sort-object/commit/32ffdac150f2d95093f4f986074798271b17eb00))
+
 ## [3.0.11](https://github.com/brickhouse-tech/sort-object/compare/v3.0.10...v3.0.11) (2026-03-02)
 
 
