@@ -1,7 +1,7 @@
 {
   "name": "@znemz/sort-object",
   "description": "Sort the keys in an object.",
-  "version": "3.0.13",
+  "version": "3.0.14",
   "type": "module",
   "homepage": "https://github.com/brickhouse-tech/sort-object",
   "originalAuthor": "Brian Woodward (https://github.com/doowb)",
