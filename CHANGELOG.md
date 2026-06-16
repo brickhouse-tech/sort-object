@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.16](https://github.com/brickhouse-tech/sort-object/compare/v3.0.15...v3.0.16) (2026-06-16)
+
+
+### Bug Fixes
+
+* rename workflow test job ([d5575dc](https://github.com/brickhouse-tech/sort-object/commit/d5575dc67a3ab5ea3fcfab48e16e4cb1c1406c7f))
+* restore tests workflow job name ([5d51eea](https://github.com/brickhouse-tech/sort-object/commit/5d51eea7efde5078b0193d573a580c028a598ba6))
+
 ## [3.0.15](https://github.com/brickhouse-tech/sort-object/compare/v3.0.14...v3.0.15) (2026-05-17)
 
 ## [3.0.14](https://github.com/brickhouse-tech/sort-object/compare/v3.0.13...v3.0.14) (2026-04-04)
