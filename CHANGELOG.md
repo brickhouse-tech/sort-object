@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.19](https://github.com/brickhouse-tech/sort-object/compare/v3.0.18...v3.0.19) (2026-11-08)
+
 ## [3.0.18](https://github.com/brickhouse-tech/sort-object/compare/v3.0.17...v3.0.18) (2026-11-08)
 
 ## [3.0.17](https://github.com/brickhouse-tech/sort-object/compare/v3.0.16...v3.0.17) (2026-06-29)
